@@ -1,0 +1,22 @@
+<svg id="arrow_r" xmlns="http://www.w3.org/2000/svg" width="29.75" height="52.812" viewBox="0 0 29.75 52.812">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        stroke: #1c1716;
+        opacity: 0.3;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+      }
+    </style>
+  </defs>
+  <path id="right_shadow" class="cls-1" d="M777.808,320.09L800.718,343l-22.91,22.91" transform="translate(-772.969 -315.094)"/>
+  <path id="right" class="cls-2" d="M777.808,317.09L800.718,340l-22.91,22.91" transform="translate(-772.969 -315.094)"/>
+</svg>

@@ -1,0 +1,395 @@
+
+
+/**
+ * トップページジャック
+ */
+.grid-block .jack-block {
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+
+}
+
+.grid-block .jack-block > img {
+  visibility: hidden;
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.jack-start .grid-block .text-area {
+  position: relative;
+}
+
+.jack-start .grid-block .text-area > p {
+  opacity: 0;
+}
+
+.jack-start .grid-block a > img {
+  visibility: hidden;
+}
+.jack-start.jack-step-2 .grid-block a > img {
+  visibility: visible;
+}
+
+.jack-step-1 .grid-block .text-area > p {
+  -moz-transition: opacity 1000ms ease 300ms;
+  -webkit-transition: opacity 1000ms ease 300ms;
+  transition: opacity 1000ms ease 300ms;
+}
+.jack-start.jack-step-2 .grid-block .text-area > p {
+  opacity: 1;
+}
+.jack-start .grid-block .text-area p {
+  position: relative;
+}
+
+
+.grid-block .text-area .jack-text {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 100%;
+  color: #000;
+  box-sizing: border-box;
+  -moz-transition: opacity 1000ms ease;
+  -webkit-transition: opacity 1000ms ease;
+  transition: opacity 1000ms ease;
+}
+@media (max-width: 599px) {
+  .grid-block.large .text-area .jack-text {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+.jack-step-2 .grid-block .text-area .jack-text {
+  opacity: 0;
+}
+
+.grid-block .jack-block .image-block {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.grid-block .jack-block .image-block.old {
+  z-index: 2;
+}
+
+
+.grid-block .jack-block .image-block img.dammy {
+  position: relative;
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+  /*transition: opacity 400ms ease;*/
+  /*backface-visibility: hidden;*/
+}
+
+
+.grid-block .jack-block .image-block span {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  opacity: 1;
+  top: 0%;
+  left: 0%;
+  width: 10%;
+  height: 10%;
+  -moz-transition: opacity 1000ms ease;
+  -webkit-transition: opacity 1000ms ease;
+  transition: opacity 1000ms ease;
+  /*backface-visibility: hidden;*/
+}
+.grid-block .jack-block.v64 .image-block span {
+  width: 13%;
+  height: 13%;
+
+  width: 12.5%;
+  width: calc(100% / 8);
+  height: 12.5%;
+  height: calc(100% / 8);
+}
+.grid-block .jack-block .image-block span.all {
+  width: 100%;
+  height: 100%;
+}
+.jack-step-1 .grid-block .jack-block .image-block.old span,
+.jack-step-2 .grid-block .jack-block .image-block.now span {
+  opacity: 0;
+}
+
+.jack-step-1 .grid-block .jack-block .image-block.old img.dammy,
+.jack-step-2 .grid-block .jack-block .image-block.now img.dammy {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.grid-block .jack-block .image-block span img {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 1000%;
+  height: auto;
+  vertical-align: top;
+}
+.grid-block .jack-block.v64 .image-block span img {
+  width: 769.2%;
+  width: calc(10000% / 13);
+
+  width: 800%;
+}
+.grid-block .jack-block.v64 .image-block span.all img {
+  width: 100%;
+}
+
+/**
+ * 100分割の場合
+ */
+.grid-block .jack-block .image-block span.x1 {
+  left: 10%;
+}
+.grid-block .jack-block .image-block span.x1 img {
+  left: -100%;
+}
+.grid-block .jack-block .image-block span.x2 {
+  left: 20%;
+}
+.grid-block .jack-block .image-block span.x2 img {
+  left: -200%;
+}
+.grid-block .jack-block .image-block span.x3 {
+  left: 30%;
+}
+.grid-block .jack-block .image-block span.x3 img {
+  left: -300%;
+}
+.grid-block .jack-block .image-block span.x4 {
+  left: 40%;
+}
+.grid-block .jack-block .image-block span.x4 img {
+  left: -400%;
+}
+.grid-block .jack-block .image-block span.x5 {
+  left: 50%;
+}
+.grid-block .jack-block .image-block span.x5 img {
+  left: -500%;
+}
+.grid-block .jack-block .image-block span.x6 {
+  left: 60%;
+}
+.grid-block .jack-block .image-block span.x6 img {
+  left: -600%;
+}
+.grid-block .jack-block .image-block span.x7 {
+  left: 70%;
+}
+.grid-block .jack-block .image-block span.x7 img {
+  left: -700%;
+}
+.grid-block .jack-block .image-block span.x8 {
+  left: 80%;
+}
+.grid-block .jack-block .image-block span.x8 img {
+  left: -800%;
+}
+.grid-block .jack-block .image-block span.x9 {
+  left: 90%;
+}
+.grid-block .jack-block .image-block span.x9 img {
+  left: -900%;
+}
+.grid-block .jack-block .image-block span.y1 {
+  top: 10%;
+}
+.grid-block .jack-block .image-block span.y1 img {
+  top: -100%;
+}
+.grid-block .jack-block .image-block span.y2 {
+  top: 20%;
+}
+.grid-block .jack-block .image-block span.y2 img {
+  top: -200%;
+}
+.grid-block .jack-block .image-block span.y3 {
+  top: 30%;
+}
+.grid-block .jack-block .image-block span.y3 img {
+  top: -300%;
+}
+.grid-block .jack-block .image-block span.y4 {
+  top: 40%;
+}
+.grid-block .jack-block .image-block span.y4 img {
+  top: -400%;
+}
+.grid-block .jack-block .image-block span.y5 {
+  top: 50%;
+}
+.grid-block .jack-block .image-block span.y5 img {
+  top: -500%;
+}
+.grid-block .jack-block .image-block span.y6 {
+  top: 60%;
+}
+.grid-block .jack-block .image-block span.y6 img {
+  top: -600%;
+}
+.grid-block .jack-block .image-block span.y7 {
+  top: 70%;
+}
+.grid-block .jack-block .image-block span.y7 img {
+  top: -700%;
+}
+.grid-block .jack-block .image-block span.y8 {
+  top: 80%;
+}
+.grid-block .jack-block .image-block span.y8 img {
+  top: -800%;
+}
+.grid-block .jack-block .image-block span.y9 {
+  top: 90%;
+}
+.grid-block .jack-block .image-block span.y9 img {
+  top: -900%;
+}
+
+
+
+/**
+ * 64分割の場合
+ */
+.grid-block .jack-block.v64 .image-block span.x-8-1 {
+  left: 12.5%;
+  left: calc(100% * 1 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-1 img {
+  left: calc(-100% * 125 * 1 / 130);
+
+  left: calc(-100% * 1);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-2 {
+  left: 25%;
+  left: calc(100% * 2 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-2 img {
+  left: calc(-100% * 125 * 2 / 130);
+
+  left: calc(-100% * 2);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-3 {
+  left: 37.5%;
+  left: calc(100% * 3 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-3 img {
+  left: calc(-100% * 125 * 3 / 130);
+
+  left: calc(-100% * 3);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-4 {
+  left: 50%;
+  left: calc(100% * 4 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-4 img {
+  left: calc(-100% * 125 * 4 / 130);
+
+  left: calc(-100% * 4);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-5 {
+  left: 62.5%;
+  left: calc(100% * 5 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-5 img {
+  left: calc(-100% * 125 * 5 / 130);
+
+  left: calc(-100% * 5);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-6 {
+  left: 75%;
+  left: calc(100% * 6 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-6 img {
+  left: calc(-100% * 125 * 6 / 130);
+
+  left: calc(-100% * 6);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-7 {
+  left: 87.5%;
+  left: calc(100% * 7 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.x-8-7 img {
+  left: calc(-100% * 125 * 7 / 130);
+
+  left: calc(-100% * 7);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-1 {
+  top: 12.5%;
+  top: calc(100% * 1 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-1 img {
+  top: calc(-100% * 125 * 1 / 130);
+
+  top: calc(-100% * 1);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-2 {
+  top: 25%;
+  top: calc(100% * 2 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-2 img {
+  top: calc(-100% * 125 * 2 / 130);
+
+  top: calc(-100% * 2);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-3 {
+  top: 37.5%;
+  top: calc(100% * 3 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-3 img {
+  top: calc(-100% * 125 * 3 / 130);
+
+  top: calc(-100% * 3);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-4 {
+  top: 50%;
+  top: calc(100% * 4 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-4 img {
+  top: calc(-100% * 125 * 4 / 130);
+
+  top: calc(-100% * 4);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-5 {
+  top: 62.5%;
+  top: calc(100% * 5 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-5 img {
+  top: calc(-100% * 125 * 5 / 130);
+
+  top: calc(-100% * 5);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-6 {
+  top: 75%;
+  top: calc(100% * 6 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-6 img {
+  top: calc(-100% * 125 * 6 / 130);
+
+  top: calc(-100% * 6);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-7 {
+  top: 87.5%;
+  top: calc(100% * 7 / 8);
+}
+.grid-block .jack-block.v64 .image-block span.y-8-7 img {
+  top: calc(-100% * 125 * 7 / 130);
+
+  top: calc(-100% * 7);
+}
