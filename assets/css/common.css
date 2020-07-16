@@ -2278,3 +2278,14 @@ dl.item-sku dd .sku_select {
   border: solid 1px #eee;
   border-radius: 0.3rem;
 }
+#goodssize {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+}
+
+#goodssize img {
+  display: block;
+  width: 100%;
+}

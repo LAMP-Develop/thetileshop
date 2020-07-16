@@ -5641,15 +5641,3 @@ a.opacitynone {
   display: none;
   z-index: 9999;
 }
-
-#goodssize {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 1rem;
-}
-
-#goodssize img {
-  display: block;
-  width: 100%;
-}
