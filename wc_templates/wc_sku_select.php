@@ -20,62 +20,61 @@ $joint_flag = false;
 // pickup
 $pickup_flag = false;
 foreach ($the_categoeries as $key => $the_categoery) {
-if ($the_categoery->slug === 'tile') {
-$mi = (float)get_field('tile_must');
-$tate = (float)get_field('tile_tate');
-$yoko = (float)get_field('tile_yoko');
-$haba = 0.5;
-$atsu = (float)get_field('tile_atsu');
-$hijyu = (float)get_field('tile_hijyu');
-$losu = (float)get_field('tile_losu');
-// 目地材始まり
-// $Aタイル一枚あたりの目地体積
-$A = (($tate + $haba) * ($yoko + $haba) * $atsu) - ($tate * $yoko * $atsu);
-// ＄B目地幅込の一平方メートルあたりの仕様数量
-$B = 10000 / ($mi * 10);
-// ＄C一平方メートルあたりの目地面積
-$C = $A * $B;
-// ＄D一平方メートルあたりの必要目地面積
-$D = $C * $hijyu;
-// ＄Eユーザー情報提供の一平方メートルあたりの必要目地量(ｇ)
-$E = ($D * $losu) / 1000;
-// 目地材終わり
+    if ($the_categoery->slug === 'tile') {
+        $mi = (float)get_field('tile_must');
+        $tate = (float)get_field('tile_tate');
+        $yoko = (float)get_field('tile_yoko');
+        $haba = 0.5;
+        $atsu = (float)get_field('tile_atsu');
+        $hijyu = (float)get_field('tile_hijyu');
+        $losu = (float)get_field('tile_losu');
+        // 目地材始まり
+        // $Aタイル一枚あたりの目地体積
+        $A = (($tate + $haba) * ($yoko + $haba) * $atsu) - ($tate * $yoko * $atsu);
+        // ＄B目地幅込の一平方メートルあたりの仕様数量
+        $B = 10000 / ($mi * 10);
+        // ＄C一平方メートルあたりの目地面積
+        $C = $A * $B;
+        // ＄D一平方メートルあたりの必要目地面積
+        $D = $C * $hijyu;
+        // ＄Eユーザー情報提供の一平方メートルあたりの必要目地量(ｇ)
+        $E = ($D * $losu) / 1000;
+        // 目地材終わり
 
-// 接着剤始まり
-// $aユーザー情報提供の一平方メートルあたりの必要接着材料（ｇ）
-$a = (2.4 * $mi) / 1000;
-// 接着剤終わり
-// タイルのフラッグをたてる
-$tile_flag = true;
-}
-// 接着剤のページ
-if ($the_categoery->slug === 'adhesives') {
-$adhesive_flag = true;
-}
-// 目地材のページ
-if ($the_categoery->slug === 'joint') {
-$joint_flag = true;
-}
-// pickupのページ
-if ($the_categoery->slug === 'pickup') {
-$pickup_flag = true;
-}
-
+        // 接着剤始まり
+        // $aユーザー情報提供の一平方メートルあたりの必要接着材料（ｇ）
+        $a = (2.4 * $mi) / 1000;
+        // 接着剤終わり
+        // タイルのフラッグをたてる
+        $tile_flag = true;
+    }
+    // 接着剤のページ
+    if ($the_categoery->slug === 'adhesives') {
+        $adhesive_flag = true;
+    }
+    // 目地材のページ
+    if ($the_categoery->slug === 'joint') {
+        $joint_flag = true;
+    }
+    // pickupのページ
+    if ($the_categoery->slug === 'pickup') {
+        $pickup_flag = true;
+    }
 }
 if (!$tile_flag) {
-$mi = 0;
-$tate = 0;
-$yoko = 0;
-$haba = 0;
-$atsu = 0;
-$hijyu = 0;
-$losu = 0;
-$A = 0;
-$B = 0;
-$C = 0;
-$D = 0;
-$E = 0;
-$a = 0;
+    $mi = 0;
+    $tate = 0;
+    $yoko = 0;
+    $haba = 0;
+    $atsu = 0;
+    $hijyu = 0;
+    $losu = 0;
+    $A = 0;
+    $B = 0;
+    $C = 0;
+    $D = 0;
+    $E = 0;
+    $a = 0;
 }
 ?>
 <div id="container">
@@ -104,9 +103,8 @@ $a = 0;
 $imageid = usces_get_itemSubImageNums();
 ?>
 <ul id="prodThumbImgs">
-<!-- <li><a id="first_side_img" href="javascript:void(0)"><img src="<?php usces_the_itemImageURL(); ?>"></a></li> -->
 <?php foreach ($imageid as $key => $val): ?>
-<li id="side_image_list" class="<?php usces_the_itemImageCaption( $val ); ?>"><a id="side_image" href="javascript:void(0)"><?php usces_the_itemImage($val, 150, 150); ?></a></li>
+<li id="side_image_list" class="<?php usces_the_itemImageCaption($val); ?>"><a id="side_image" href="javascript:void(0)"><?php usces_the_itemImage($val, 150, 150); ?></a></li>
 <?php endforeach; ?>
 </ul>
 </div>
@@ -126,14 +124,6 @@ $imageid = usces_get_itemSubImageNums();
 
 <!-- start item detail // -->
 <div id="prodDetail" class="contProd">
-<div class="L4_tittype02">
-<dl id="prodSelectColor" class="selectAttr">
-</dl>
-</div>
-<div class="L-text">
-<span class="text-content"></span>
-</div>
-
 <div class="hidden_box">
 <label class="see-the-details" for="label1">この商品について詳しくみる</label>
 <input type="checkbox" id="label1">
@@ -188,7 +178,7 @@ $imageid = usces_get_itemSubImageNums();
 <img src="<?php echo $wp_url; ?>/assets/img/product/item/down.png"></a>
 </li>
 </ul>
-<?php if($tile_flag): ?>
+<?php if ($tile_flag): ?>
 <ul class="m2_basic">
 <li class="m2">
 <span class="auto"><img src="<?php echo $wp_url; ?>/assets/img/product/m2.png" alt="面積計算" title="面積計算" >&nbsp;タイルを張る面積で自動計算</span>
@@ -239,7 +229,7 @@ $imageid = usces_get_itemSubImageNums();
 </div>
 </form>
 
-<?php if($tile_flag): ?>
+<?php if ($tile_flag): ?>
 <div class="adhesive-next">
 <p><a href="#">接着剤</a>・<a href="#">目地材</a>（目地幅:5mm）を自動で計算します</p>
 </div>
@@ -501,7 +491,7 @@ $sku = $usces->get_skus($recoJointGaiheki);
 <?php
 $post3 = get_post($recoAdhesiveHoriyamon);
 global $usces;
-$sku = $usces->get_skus( $recoAdhesiveHoriyamon);
+$sku = $usces->get_skus($recoAdhesiveHoriyamon);
 ?>
 <li class="js-cart-item">
 <ul>
@@ -563,7 +553,7 @@ $sku = $usces->get_skus( $recoAdhesiveHoriyamon);
 <?php
 $post4 = get_post($recoJointHoriyamon);
 global $usces;
-$sku = $usces->get_skus( $recoJointHoriyamon);
+$sku = $usces->get_skus($recoJointHoriyamon);
 ?>
 <li class="js-cart-item">
 <ul>
@@ -660,7 +650,7 @@ $sku = $usces->get_skus( $recoJointHoriyamon);
 <?php
 $post5 = get_post($recoAdhesiveNaiheki);
 global $usces;
-$sku = $usces->get_skus( $recoAdhesiveNaiheki);
+$sku = $usces->get_skus($recoAdhesiveNaiheki);
 ?>
 <li class="js-cart-item">
 <ul>
@@ -722,7 +712,7 @@ $sku = $usces->get_skus( $recoAdhesiveNaiheki);
 <?php
 $post6 = get_post($recoJointNaiheki);
 global $usces;
-$sku = $usces->get_skus( $recoJointNaiheki);
+$sku = $usces->get_skus($recoJointNaiheki);
 ?>
 <li class="js-cart-item">
 <ul>
@@ -818,7 +808,7 @@ $sku = $usces->get_skus( $recoJointNaiheki);
 <?php
 $post7 = get_post($recoAdhesiveOkunaisyou);
 global $usces;
-$sku = $usces->get_skus( $recoAdhesiveOkunaisyou);
+$sku = $usces->get_skus($recoAdhesiveOkunaisyou);
 ?>
 <li class="js-cart-item">
 <ul>
@@ -880,7 +870,7 @@ $sku = $usces->get_skus( $recoAdhesiveOkunaisyou);
 <?php
 $post8 = get_post($recoJointOkunaisyou);
 global $usces;
-$sku = $usces->get_skus( $recoJointOkunaisyou);
+$sku = $usces->get_skus($recoJointOkunaisyou);
 ?>
 <li class="js-cart-item">
 <ul>
@@ -978,7 +968,7 @@ $sku = $usces->get_skus( $recoJointOkunaisyou);
 <?php
 $post9 = get_post($recoAdhesiveCraft);
 global $usces;
-$sku = $usces->get_skus( $recoAdhesiveCraft);
+$sku = $usces->get_skus($recoAdhesiveCraft);
 ?>
 <li class="js-cart-item">
 <ul>
@@ -1005,7 +995,7 @@ $sku = $usces->get_skus( $recoAdhesiveCraft);
 <?php
 $post10 = get_post($recoJointCraft);
 global $usces;
-$sku = $usces->get_skus( $recoJointCraft);
+$sku = $usces->get_skus($recoJointCraft);
 ?>
 <li class="js-cart-item">
 <ul>
@@ -1091,7 +1081,7 @@ $sku = $usces->get_skus( $recoJointCraft);
 $args = [];
 // タイルの商品ページの時
   if ($tile_flag) {
-    $args = array(
+      $args = array(
       'numberposts' => 6,
       'category' => 29,
       'exclude' => $item_id
@@ -1099,7 +1089,7 @@ $args = [];
   }
   // 接着剤の商品ページの時
   if ($adhesive_flag) {
-    $args = array(
+      $args = array(
       'numberposts' => 6,
       'category' => 37,
       'exclude' => $item_id
@@ -1107,7 +1097,7 @@ $args = [];
   }
   // 目地材の商品ページの時
   if ($joint_flag) {
-    $args = array(
+      $args = array(
       'numberposts' => 6,
       'category' => 38,
       'exclude' => $item_id
@@ -1115,7 +1105,7 @@ $args = [];
   }
   // PICKUPページの時
   if ($pickup_flag) {
-    $args = array(
+      $args = array(
       'numberposts' => 6,
       'category' => 30,
       'exclude' => $item_id
@@ -1123,21 +1113,21 @@ $args = [];
   }
 
   if (count($args) === 0) {
-    $args = array(
+      $args = array(
       'numberposts' => 6,
       'category' => 24,
       'exclude' => $item_id
     );
   }
 
-  $posts_array = get_posts( $args );
+  $posts_array = get_posts($args);
 ?>
 <?php foreach ($posts_array as $key => $post):?>
 <?php $post_id = $post->ID; ?>
 <li style="z-index: 1;">
 <a href="<?php echo get_the_permalink($post_id); ?>" class="button-todetail">
 <span class="image">
-<img src="<?php echo get_the_post_thumbnail($post_id, array( 180, 180 )); ?>">
+<?php echo get_the_post_thumbnail($post_id, array( 180, 180 )); ?>
 </span>
 <p class="product-name">
 <?php echo $post->post_title; ?>

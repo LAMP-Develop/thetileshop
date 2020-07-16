@@ -293,7 +293,7 @@ if (has_post_thumbnail()) {
 <p class="tile-type disabled"><span><?php echo $item_info; ?></span></p>
 <?php endif; ?>
 <div class="valiation-list">
-<p><span class="valiaton-name"><?php echo $item_info; ?></span><span class="valiation-price">&yen;<?php echo '$price'; ?>(税別)</span></p>
+<p><span class="valiaton-name"><?php echo $item_info; ?></span><span class="valiation-price">&yen;<?php echo $price; ?>(税別)</span></p>
 </div>
 </li>
 <li class="price">
