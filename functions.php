@@ -191,43 +191,66 @@ function archve_price($id)
 }
 
 //関連商品表示に必要な関数
-if ( ! function_exists( 'welcart_assistance_excerpt_length' ) ) {
-    function welcart_assistance_excerpt_length( $length ) {
+if (! function_exists('welcart_assistance_excerpt_length')) {
+    function welcart_assistance_excerpt_length($length)
+    {
         return 10;
     }
 }
 
-if ( ! function_exists( 'welcart_assistance_excerpt_mblength' ) ) {
-    function welcart_assistance_excerpt_mblength( $length ) {
+if (! function_exists('welcart_assistance_excerpt_mblength')) {
+    function welcart_assistance_excerpt_mblength($length)
+    {
         return 40;
     }
 }
 
-if ( ! function_exists( 'welcart_excerpt_length' ) ) {
-    function welcart_excerpt_length( $length ) {
+if (! function_exists('welcart_excerpt_length')) {
+    function welcart_excerpt_length($length)
+    {
         return 40;
     }
 }
-add_filter( 'excerpt_length', 'welcart_excerpt_length' );
+add_filter('excerpt_length', 'welcart_excerpt_length');
 
-if ( ! function_exists( 'welcart_excerpt_mblength' ) ) {
-    function welcart_excerpt_mblength( $length ) {
+if (! function_exists('welcart_excerpt_mblength')) {
+    function welcart_excerpt_mblength($length)
+    {
         return 110;
     }
 }
-add_filter( 'excerpt_mblength', 'welcart_excerpt_mblength' );
+add_filter('excerpt_mblength', 'welcart_excerpt_mblength');
 
-if ( ! function_exists( 'welcart_continue_reading_link' ) ) {
-    function welcart_continue_reading_link() {
-        return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">→</span>', 'uscestheme' ) . '</a>';
+if (! function_exists('welcart_continue_reading_link')) {
+    function welcart_continue_reading_link()
+    {
+        return ' <a href="'. get_permalink() . '">' . __('Continue reading <span class="meta-nav">→</span>', 'uscestheme') . '</a>';
     }
 }
 
 // 検索機能では商品のみを検索するようにする
-function wp_search_filter1( $query ) {
-    if ( $query->is_search && !is_admin() ){
-        $query->set( 'cat', '24' );
+function wp_search_filter1($query)
+{
+    if ($query->is_search && !is_admin()) {
+        $query->set('cat', '24');
     }
     return $query;
 }
-add_action( 'pre_get_posts', 'wp_search_filter1' );
+add_action('pre_get_posts', 'wp_search_filter1');
+
+
+/* 送料無料条件の金額 */
+define('SHIPPING_FREE_PRICE', 10000);
+/**
+ * カート内の合計が3,000円以上で送料を無料にする
+ */
+function ag_free_set_cart_fees_shipping_charge($shipping_charge, $carts, $entries)
+{
+    $shipping_free_price = SHIPPING_FREE_PRICE; //送料無料条件の金額
+    $total_items_price = $entries['order']['total_items_price'];
+    if ($total_items_price >= $shipping_free_price) {
+        $shipping_charge = 0;
+    }
+    return $shipping_charge;
+}
+add_filter('usces_filter_set_cart_fees_shipping_charge', 'ag_free_set_cart_fees_shipping_charge', 10, 3);
