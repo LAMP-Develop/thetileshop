@@ -296,15 +296,6 @@ $imageid = usces_get_itemSubImageNums();
 
 <!-- /.tab-1 外壁 -->
 <div class="tab-content tab-1-content">
-<!--<div class="use1"><span class="use-question"><a href="#"><img src="<?php echo $wp_url; ?>/assets/img/product/question.png" alt="疑問・質問" title="疑問・質問"></a></span>
-<ul>
-<li class="exterior01">住宅外壁・RC造・SRC造</li><li class="exterior01">住宅外壁・S造</li><li class="exterior01">住宅外壁・木造</li>
-<li class="gate">ブロック塀</li><li class="gate">門柱・RC造・モルタル</li>
-<li class="interior">非水まわり諸室</li><li class="interior">キッチン</li><li class="interior">洗面脱衣室</li><li class="interior">浴室・シャワー室</li><li class="interior">トイレ</li>
-<li class="floor">玄関</li><li class="floor">室内</li>
-<li class="craft">木製家具類</li><li class="craft">ガラス製インテリア製品</li><li class="craft">その他インテリアグッズ</li>
-</ul>
-</div>-->
 <div class="use1">
 <div class="use-title">用　途</div>
 <span class="use-question"><a href="#"><img src="<?php echo $wp_url; ?>/assets/img/product/question.png" alt="疑問・質問" class="youtotoha" title=""></a></span>
