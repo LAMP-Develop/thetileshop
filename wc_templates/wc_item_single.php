@@ -126,24 +126,6 @@ $imageid = usces_get_itemSubImageNums();
 <div id="prodDetail" class="contProd">
 <div class="L4_tittype02">
 <dl id="prodSelectColor" class="selectAttr">
-<!-- <dt id="selectColorTitle">
-<img src="<?php echo $wp_url; ?>/assets/img/product/tit_select_color_JP.gif" alt="カラー・バリエーションを選択" title="カラー・バリエーションを選択" >
-<p class="current">カラー:&nbsp;23 ワイン</p>
-<p class="number">
-<img src="<?php echo $wp_url; ?>/assets/img/product/tit_select_number_JP.gif" alt="商品番号" title="商品番号">
-<span class="prodNo">商品番号：</span><span class="prodNumber">SB45-23</span>
-</p>
-</dt> -->
-<!-- <dd id="selectColorDetail">
-<ul id="listChipColor" class="listChip clearfix">
-<li color="00" class="">
-<div class="chipCover" color="00" title="ホワイト"></div>
-<a href="#colorSelect" title="ホワイト">
-<img alt="ホワイト" src="<?php echo $wp_url; ?>/products/img/item/aqa/16.jpg">
-</a>
-</li>
-</ul>
-</dd> -->
 </dl>
 </div>
 <div class="L-text">
@@ -311,15 +293,6 @@ $imageid = usces_get_itemSubImageNums();
 
 <!-- /.tab-1 外壁 -->
 <div class="tab-content tab-1-content">
-<!--<div class="use1"><span class="use-question"><a href="#"><img src="<?php echo $wp_url; ?>/assets/img/product/question.png" alt="疑問・質問" title="疑問・質問"></a></span>
-<ul>
-<li class="exterior01">住宅外壁・RC造・SRC造</li><li class="exterior01">住宅外壁・S造</li><li class="exterior01">住宅外壁・木造</li>
-<li class="gate">ブロック塀</li><li class="gate">門柱・RC造・モルタル</li>
-<li class="interior">非水まわり諸室</li><li class="interior">キッチン</li><li class="interior">洗面脱衣室</li><li class="interior">浴室・シャワー室</li><li class="interior">トイレ</li>
-<li class="floor">玄関</li><li class="floor">室内</li>
-<li class="craft">木製家具類</li><li class="craft">ガラス製インテリア製品</li><li class="craft">その他インテリアグッズ</li>
-</ul>
-</div>-->
 <div class="use1">
 <div class="use-title">用　途</div>
 <span class="use-question"><a href="#"><img src="<?php echo $wp_url; ?>/assets/img/product/question.png" alt="疑問・質問" class="youtotoha" title=""></a></span>
@@ -342,12 +315,9 @@ $imageid = usces_get_itemSubImageNums();
 <ul>
 <li class="head">
 <ul>
-<!-- <li class="check">選択</li> -->
 <li class="name">商品名</li>
 <li class="unit">販売単位</li>
 <li class="price">税抜単価</li>
-<!-- <li class="quantity">個数</li> -->
-<!-- <li class="amount">合計量</li> -->
 </ul>
 </li>
 <?php
@@ -371,11 +341,6 @@ $sku = $usces->get_skus($recoAdhesiveGaiheki);
 ?>
 <li class="js-cart-item">
 <ul>
-<!-- <li class="check">
-<label class="checkbox">
-<input type="checkbox" name="prod-choice" checked="checked" value="この商品を選択する" data-input="0">
-</label>
-</li> -->
 <li class="pic"><?php echo get_the_post_thumbnail($recoAdhesiveGaiheki); ?></li>
 <li class="name">
 <a href="<?php echo get_the_permalink($recoAdhesiveGaiheki); ?>">
@@ -385,45 +350,7 @@ $sku = $usces->get_skus($recoAdhesiveGaiheki);
 </li>
 <li class="unit">2kg</li>
 <li class="price">&yen;<?php echo number_format($sku[0]['cprice']); ?></li>
-<!-- <p class="adhesive-color sp-only">
-<label class="radio">
-<input type="radio" name="adhesive1" value="1" checked data-input="1"><span class="white">オフホワイト</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="2"  data-input="1"><span class="beige">ベージュ</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="3"  data-input="1"><span class="gray">グレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="4"  data-input="1"><span class="darkgray">ダークグレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="5"  data-input="1"><span class="black">ブラック</span>
-</label>
-</p> -->
-<!-- <li class="quantity">
-<input type="text" name="" value="68" class="quantity">
-</li> -->
-<!-- <li class="amount total"><span>136</span>kg</li> -->
 </ul>
-<!-- <p class="adhesive-color pc-only">
-<label class="radio">
-<input type="radio" name="adhesive2" value="1" checked data-input="1"><span class="white">オフホワイト</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="2"  data-input="1"><span class="beige">ベージュ</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="3"  data-input="1"><span class="gray">グレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="4"  data-input="1"><span class="darkgray">ダークグレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="5"  data-input="1"><span class="black">ブラック</span>
-</label>
-</p> -->
 </li>
 
 <?php
@@ -433,11 +360,6 @@ $sku = $usces->get_skus($recoJointGaiheki);
 ?>
 <li class="js-cart-item">
 <ul>
-<!-- <li class="check">
-<label class="checkbox">
-<input type="checkbox" name="prod-choice" checked="checked" value="この商品を選択する" data-input="1">
-</label>
-</li> -->
 <li class="pic"><?php echo get_the_post_thumbnail($recoJointGaiheki); ?></li>
 <li class="name">
 <a href="<?php echo get_the_permalink($recoJointGaiheki); ?>">
@@ -447,49 +369,12 @@ $sku = $usces->get_skus($recoJointGaiheki);
 </li>
 <li class="unit">0.2kg</li>
 <li class="price">&yen;<?php echo number_format($sku[0]['cprice']); ?></li>
-<!-- <p class="adhesive-color sp-only">
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="1" checked data-input="1"><span class="white">白</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="2"  data-input="1"><span class="gray">灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="3"  data-input="1"><span class="darkgray">濃灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="4"  data-input="1"><span class="black">黒</span>
-</label>
-</p> -->
-<!-- <li class="quantity">
-<input type="text" name="" value="525" class="quantity">
-</li> -->
-<!-- <li class="amount total"><span>106</span>kg</li> -->
 </ul>
-<!-- <p class="adhesive-color pc-only">
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="1" checked data-input="1"><span class="white">白</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="2"  data-input="1"><span class="gray">灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="3"  data-input="1"><span class="darkgray">濃灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="4"  data-input="1"><span class="black">黒</span>
-</label>
-</p> -->
 </li>
 
 </ul>
 <p class="annotation">※接着剤・目地材の計算結果は参考の数量となります。少し多めに算出されるようになっております。</p>
 </section>
-
-<!-- <ul class="basic3">
-<li class="pay1"><span><img src="../../assets/img/product/bgr_front_en.gif" alt="金額" title="金額"></span>&nbsp;金額：<span><strong>256,750</strong>円</span>（税別）</li>
-<li class="pay2"><span class="track"><img src="../../assets/img/product/bgr_front_track.gif" alt="配送料" title="配送料"></span>&nbsp;配送料：&nbsp;<span><strong>0</strong>円</span></li>
-</ul> -->
 </div><!-- /.tab-1 外壁 -->
 
 <!-- .tab-2 塀や門 -->
@@ -513,12 +398,9 @@ $sku = $usces->get_skus($recoJointGaiheki);
 <ul>
 <li class="head">
 <ul>
-<!-- <li class="check">選択</li> -->
 <li class="name">商品名</li>
 <li class="unit">販売単位</li>
 <li class="price">税抜単価</li>
-<!-- <li class="quantity">個数</li> -->
-<!-- <li class="amount">合計量</li> -->
 </ul>
 </li>
 
@@ -529,11 +411,6 @@ $sku = $usces->get_skus( $recoAdhesiveHoriyamon);
 ?>
 <li class="js-cart-item">
 <ul>
-<!-- <li class="check">
-<label class="checkbox">
-<input type="checkbox" name="prod-choice" checked="checked" value="この商品を選択する" data-input="0">
-</label>
-</li> -->
 <li class="pic"><?php echo get_the_post_thumbnail($recoAdhesiveHoriyamon); ?></li>
 <li class="name">
 <a href="<?php echo get_the_permalink($recoAdhesiveHoriyamon); ?>">
@@ -543,45 +420,7 @@ $sku = $usces->get_skus( $recoAdhesiveHoriyamon);
 </li>
 <li class="unit">2kg</li>
 <li class="price">&yen;<?php echo number_format($sku[0]['cprice']); ?></li>
-<!-- <p class="adhesive-color sp-only">
-<label class="radio">
-<input type="radio" name="adhesive1" value="1" checked data-input="1"><span class="white">オフホワイト</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="2"  data-input="1"><span class="beige">ベージュ</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="3"  data-input="1"><span class="gray">グレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="4"  data-input="1"><span class="darkgray">ダークグレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="5"  data-input="1"><span class="black">ブラック</span>
-</label>
-</p> -->
-<!-- <li class="quantity">
-<input type="text" name="" value="68" class="quantity">
-</li>
-<li class="amount total"><span>136</span>kg</li> -->
 </ul>
-<!-- <p class="adhesive-color pc-only">
-<label class="radio">
-<input type="radio" name="adhesive2" value="1" checked data-input="1"><span class="white">オフホワイト</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="2"  data-input="1"><span class="beige">ベージュ</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="3"  data-input="1"><span class="gray">グレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="4"  data-input="1"><span class="darkgray">ダークグレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="5"  data-input="1"><span class="black">ブラック</span>
-</label>
-</p> -->
 </li>
 
 <?php
@@ -591,11 +430,6 @@ $sku = $usces->get_skus( $recoJointHoriyamon);
 ?>
 <li class="js-cart-item">
 <ul>
-<!-- <li class="check">
-<label class="checkbox">
-<input type="checkbox" name="prod-choice" checked="checked" value="この商品を選択する" data-input="1">
-</label>
-</li> -->
 <li class="pic"><?php echo get_the_post_thumbnail($recoJointHoriyamon); ?></li>
 <li class="name">
 <a href="<?php echo get_the_permalink($recoJointHoriyamon); ?>">
@@ -605,48 +439,11 @@ $sku = $usces->get_skus( $recoJointHoriyamon);
 </li>
 <li class="unit">0.2kg</li>
 <li class="price">&yen;<?php echo number_format($sku[0]['price']); ?></li>
-<!-- <p class="adhesive-color sp-only">
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="1" checked data-input="1"><span class="white">白</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="2"  data-input="1"><span class="gray">灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="3"  data-input="1"><span class="darkgray">濃灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="4"  data-input="1"><span class="black">黒</span>
-</label>
-</p> -->
-<!-- <li class="quantity">
-<input type="text" name="" value="525" class="quantity">
-</li>
-<li class="amount total"><span>106</span>kg</li> -->
 </ul>
-<!-- <p class="adhesive-color pc-only">
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="1" checked data-input="1"><span class="white">白</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="2"  data-input="1"><span class="gray">灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="3"  data-input="1"><span class="darkgray">濃灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="4"  data-input="1"><span class="black">黒</span>
-</label>
-</p> -->
 </li>
 </ul>
 <p class="annotation">※接着剤・目地材の計算結果は参考の数量となります。少し多めに算出されるようになっております。</p>
 </section>
-
-<!-- <ul class="basic3">
-<li class="pay1"><span><img src="../../assets/img/product/bgr_front_en.gif" alt="金額" title="金額"></span>&nbsp;金額：<span><strong>256,750</strong>円</span>（税別）</li>
-<li class="pay2"><span class="track"><img src="../../assets/img/product/bgr_front_track.gif" alt="配送料" title="配送料"></span>&nbsp;配送料：&nbsp;<span><strong>0</strong>円</span></li>
-</ul> -->
 </div><!-- /.tab-2 塀や門 -->
 
 <!-- .tab-3 内壁 -->
@@ -673,12 +470,9 @@ $sku = $usces->get_skus( $recoJointHoriyamon);
 <ul>
 <li class="head">
 <ul>
-<!-- <li class="check">選択</li> -->
 <li class="name">商品名</li>
 <li class="unit">販売単位</li>
 <li class="price">税抜単価</li>
-<!-- <li class="quantity">個数</li> -->
-<!-- <li class="amount">合計量</li> -->
 </ul>
 </li>
 <?php
@@ -688,11 +482,6 @@ $sku = $usces->get_skus( $recoAdhesiveNaiheki);
 ?>
 <li class="js-cart-item">
 <ul>
-<!-- <li class="check">
-<label class="checkbox">
-<input type="checkbox" name="prod-choice" checked="checked" value="この商品を選択する" data-input="0">
-</label>
-</li> -->
 <li class="pic"><?php echo get_the_post_thumbnail($recoAdhesiveNaiheki); ?></li>
 <li class="name">
 <a href="<?php echo get_the_permalink($recoAdhesiveNaiheki); ?>">
@@ -702,45 +491,7 @@ $sku = $usces->get_skus( $recoAdhesiveNaiheki);
 </li>
 <li class="unit">2kg</li>
 <li class="price">&yen;<?php echo number_format($sku[0]['cprice']); ?></li>
-<!-- <p class="adhesive-color sp-only">
-<label class="radio">
-<input type="radio" name="adhesive1" value="1" checked data-input="1"><span class="white">オフホワイト</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="2"  data-input="1"><span class="beige">ベージュ</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="3"  data-input="1"><span class="gray">グレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="4"  data-input="1"><span class="darkgray">ダークグレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="5"  data-input="1"><span class="black">ブラック</span>
-</label>
-</p> -->
-<!-- <li class="quantity">
-<input type="text" name="" value="68" class="quantity">
-</li>
-<li class="amount total"><span>136</span>kg</li> -->
 </ul>
-<!-- <p class="adhesive-color pc-only">
-<label class="radio">
-<input type="radio" name="adhesive2" value="1" checked data-input="1"><span class="white">オフホワイト</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="2"  data-input="1"><span class="beige">ベージュ</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="3"  data-input="1"><span class="gray">グレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="4"  data-input="1"><span class="darkgray">ダークグレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="5"  data-input="1"><span class="black">ブラック</span>
-</label>
-</p> -->
 </li>
 
 <?php
@@ -750,11 +501,6 @@ $sku = $usces->get_skus( $recoJointNaiheki);
 ?>
 <li class="js-cart-item">
 <ul>
-<!-- <li class="check">
-<label class="checkbox">
-<input type="checkbox" name="prod-choice" checked="checked" value="この商品を選択する" data-input="1">
-</label>
-</li> -->
 <li class="pic"><?php echo get_the_post_thumbnail($recoJointNaiheki); ?></li>
 <li class="name">
 <a href="<?php echo get_the_permalink($recoJointNaiheki); ?>">
@@ -764,49 +510,12 @@ $sku = $usces->get_skus( $recoJointNaiheki);
 </li>
 <li class="unit">0.2kg</li>
 <li class="price">&yen;<?php echo number_format($sku[0]['cprice']); ?></li>
-<!-- <p class="adhesive-color sp-only">
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="1" checked data-input="1"><span class="white">白</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="2"  data-input="1"><span class="gray">灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="3"  data-input="1"><span class="darkgray">濃灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="4"  data-input="1"><span class="black">黒</span>
-</label>
-</p> -->
-<!-- <li class="quantity">
-<input type="text" name="" value="525" class="quantity">
-</li>
-<li class="amount total"><span>106</span>kg</li> -->
 </ul>
-<!-- <p class="adhesive-color pc-only">
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="1" checked data-input="1"><span class="white">白</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="2"  data-input="1"><span class="gray">灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="3"  data-input="1"><span class="darkgray">濃灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="4"  data-input="1"><span class="black">黒</span>
-</label>
-</p> -->
 </li>
 
 </ul>
 <p class="annotation">※接着剤・目地材の計算結果は参考の数量となります。少し多めに算出されるようになっております。</p>
 </section>
-
-<!-- <ul class="basic3">
-<li class="pay1"><span><img src="../../assets/img/product/bgr_front_en.gif" alt="金額" title="金額"></span>&nbsp;金額：<span><strong>256,750</strong>円</span>（税別）</li>
-<li class="pay2"><span class="track"><img src="../../assets/img/product/bgr_front_track.gif" alt="配送料" title="配送料"></span>&nbsp;配送料：&nbsp;<span><strong>0</strong>円</span></li>
-</ul> -->
 </div><!-- /.tab-3 内壁 -->
 
 <!-- .tab-4 屋内床 -->
@@ -831,12 +540,9 @@ $sku = $usces->get_skus( $recoJointNaiheki);
 <ul>
 <li class="head">
 <ul>
-<!-- <li class="check">選択</li> -->
 <li class="name">商品名</li>
 <li class="unit">販売単位</li>
 <li class="price">税抜単価</li>
-<!-- <li class="quantity">個数</li> -->
-<!-- <li class="amount">合計量</li> -->
 </ul>
 </li>
 <?php
@@ -846,11 +552,6 @@ $sku = $usces->get_skus( $recoAdhesiveOkunaisyou);
 ?>
 <li class="js-cart-item">
 <ul>
-<!-- <li class="check">
-<label class="checkbox">
-<input type="checkbox" name="prod-choice" checked="checked" value="この商品を選択する" data-input="0">
-</label>
-</li> -->
 <li class="pic"><?php echo get_the_post_thumbnail($recoAdhesiveOkunaisyou); ?></li>
 <li class="name">
 <a href="<?php echo get_the_permalink($recoAdhesiveOkunaisyou); ?>">
@@ -860,45 +561,7 @@ $sku = $usces->get_skus( $recoAdhesiveOkunaisyou);
 </li>
 <li class="unit">2kg</li>
 <li class="price">&yen;<?php echo number_format($sku[0]['cprice']); ?></li>
-<!-- <p class="adhesive-color sp-only">
-<label class="radio">
-<input type="radio" name="adhesive1" value="1" checked data-input="1"><span class="white">オフホワイト</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="2"  data-input="1"><span class="beige">ベージュ</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="3"  data-input="1"><span class="gray">グレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="4"  data-input="1"><span class="darkgray">ダークグレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive1" value="5"  data-input="1"><span class="black">ブラック</span>
-</label>
-</p> -->
-<!-- <li class="quantity">
-<input type="text" name="" value="68" class="quantity">
-</li>
-<li class="amount total"><span>136</span>kg</li> -->
 </ul>
-<!-- <p class="adhesive-color pc-only">
-<label class="radio">
-<input type="radio" name="adhesive2" value="1" checked data-input="1"><span class="white">オフホワイト</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="2"  data-input="1"><span class="beige">ベージュ</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="3"  data-input="1"><span class="gray">グレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="4"  data-input="1"><span class="darkgray">ダークグレー</span>
-</label>
-<label class="radio">
-<input type="radio" name="adhesive2" value="5"  data-input="1"><span class="black">ブラック</span>
-</label>
-</p> -->
 </li>
 
 <?php
@@ -908,11 +571,6 @@ $sku = $usces->get_skus( $recoJointOkunaisyou);
 ?>
 <li class="js-cart-item">
 <ul>
-<!-- <li class="check">
-<label class="checkbox">
-<input type="checkbox" name="prod-choice" checked="checked" value="この商品を選択する" data-input="1">
-</label>
-</li> -->
 <li class="pic"><?php echo get_the_post_thumbnail($recoJointOkunaisyou); ?></li>
 <li class="name">
 <a href="<?php echo get_the_permalink($recoJointOkunaisyou); ?>">
@@ -922,48 +580,11 @@ $sku = $usces->get_skus( $recoJointOkunaisyou);
 </li>
 <li class="unit">0.2kg</li>
 <li class="price">&yen;<?php echo number_format($sku[0]['cprice']); ?></li>
-<!-- <p class="adhesive-color sp-only">
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="1" checked data-input="1"><span class="white">白</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="2"  data-input="1"><span class="gray">灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="3"  data-input="1"><span class="darkgray">濃灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="4"  data-input="1"><span class="black">黒</span>
-</label>
-</p> -->
-<!-- <li class="quantity">
-<input type="text" name="" value="525" class="quantity">
-</li>
-<li class="amount total"><span>106</span>kg</li> -->
 </ul>
-<!-- <p class="adhesive-color pc-only">
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="1" checked data-input="1"><span class="white">白</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="2"  data-input="1"><span class="gray">灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="3"  data-input="1"><span class="darkgray">濃灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="4"  data-input="1"><span class="black">黒</span>
-</label>
-</p> -->
 </li>
 </ul>
 <p class="annotation">※接着剤・目地材の計算結果は参考の数量となります。少し多めに算出されるようになっております。</p>
 </section>
-
-<!-- <ul class="basic3">
-<li class="pay1"><span><img src="../../assets/img/product/bgr_front_en.gif" alt="金額" title="金額"></span>&nbsp;金額：<span><strong>256,750</strong>円</span>（税別）</li>
-<li class="pay2"><span class="track"><img src="../../assets/img/product/bgr_front_track.gif" alt="配送料" title="配送料"></span>&nbsp;配送料：&nbsp;<span><strong>0</strong>円</span></li>
-</ul> -->
 </div><!-- /.tab-4 屋内床 -->
 
 <!-- .tab-5 クラフト -->
@@ -991,12 +612,9 @@ $sku = $usces->get_skus( $recoJointOkunaisyou);
 <ul>
 <li class="head">
 <ul>
-<!-- <li class="check">選択</li> -->
 <li class="name">商品名</li>
 <li class="unit">販売単位</li>
 <li class="price">税抜単価</li>
-<!-- <li class="quantity">個数</li>
-<li class="amount">合計量</li> -->
 </ul>
 </li>
 <?php
@@ -1006,11 +624,6 @@ $sku = $usces->get_skus( $recoAdhesiveCraft);
 ?>
 <li class="js-cart-item">
 <ul>
-<!-- <li class="check">
-<label class="checkbox">
-<input type="checkbox" name="prod-choice" checked="checked" value="この商品を選択する" data-input="0">
-</label>
-</li> -->
 <li class="pic"><?php echo get_the_post_thumbnail($recoAdhesiveCraft); ?></li>
 <li class="name">
 <a href="<?php echo get_the_permalink($recoAdhesiveCraft); ?>">
@@ -1033,11 +646,6 @@ $sku = $usces->get_skus( $recoJointCraft);
 ?>
 <li class="js-cart-item">
 <ul>
-<!-- <li class="check">
-<label class="checkbox">
-<input type="checkbox" name="prod-choice" checked="checked" value="この商品を選択する" data-input="1">
-</label>
-</li> -->
 <li class="pic"><?php echo get_the_post_thumbnail($recoJointCraft); ?></li>
 <li class="name">
 <a href="<?php get_the_permalink($recoJointCraft); ?>">
@@ -1047,48 +655,11 @@ $sku = $usces->get_skus( $recoJointCraft);
 </li>
 <li class="unit">0.2kg</li>
 <li class="price">&yen;<?php echo number_format($sku[0]['cprice']); ?></li>
-<!-- <p class="adhesive-color sp-only">
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="1" checked data-input="1"><span class="white">白</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="2"  data-input="1"><span class="gray">灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="3"  data-input="1"><span class="darkgray">濃灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial1" value="4"  data-input="1"><span class="black">黒</span>
-</label>
-</p> -->
-<!-- <li class="quantity">
-<input type="text" name="" value="525" class="quantity">
-</li>
-<li class="amount total"><span>106</span>kg</li> -->
 </ul>
-<!-- <p class="adhesive-color pc-only">
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="1" checked data-input="1"><span class="white">白</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="2"  data-input="1"><span class="gray">灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="3"  data-input="1"><span class="darkgray">濃灰</span>
-</label>
-<label class="radio">
-<input type="radio" name="jointmaterial2" value="4"  data-input="1"><span class="black">黒</span>
-</label>
-</p> -->
 </li>
 </ul>
 <p class="annotation">※接着剤・目地材の計算結果は参考の数量となります。少し多めに算出されるようになっております。</p>
 </section>
-
-<!-- <ul class="basic3">
-<li class="pay1"><span><img src="../../assets/img/product/bgr_front_en.gif" alt="金額" title="金額"></span>&nbsp;金額：<span><strong>256,750</strong>円</span>（税別）</li>
-<li class="pay2"><span class="track"><img src="../../assets/img/product/bgr_front_track.gif" alt="配送料" title="配送料"></span>&nbsp;配送料：&nbsp;<span><strong>0</strong>円</span></li>
-</ul> -->
 </div><!-- /.tab-5 クラフト -->
 
 
@@ -1168,16 +739,6 @@ $args = [];
 </a>
 </li>
 <?php endforeach; ?>
-<!-- <li style="z-index: 2;"><a href="#" class="button-todetail"><span class="image"><img src="../img/item/andver/01.jpg" alt="アンドベール"></span><p class="product-name">アンドベール</p></a></li>
-<li style="z-index: 1;"><a href="#" class="button-todetail"><span class="image"><img src="../img/item/aqa/09.jpg" alt="アクア館　パープル"></span><p class="product-name">アクア館　パープル</p></a></li>
-<li style="z-index: 1;"><a href="#" class="button-todetail"><span class="image"><img src="../img/item/arazin/05.jpg" alt="アラジン"></span><p class="product-name">アラジン</p></a></li>
-<li style="z-index: 1;"><a href="#" class="button-todetail"><span class="image"><img src="../img/item/arazin/05-2.jpg" alt="アラジン"></span><p class="product-name">アラジン</p></a></li>
-<li style="z-index: 1;"><a href="#" class="button-todetail"><span class="image"><img src="../img/item/ccy/01.jpg" alt="CCR"></span><p class="product-name">CCR</p></a></li>
-<li style="z-index: 1;"><a href="#" class="button-todetail"><span class="image"><img src="../img/item/flower/10.jpg" alt="フラワーミックス"></span><p class="product-name">フラワーミックス</p></a></li> -->
-<!-- <li style="z-index: 1;"><a href="#" class="button-todetail"><span class="image"><img src="../img/item/happys/11.jpg" alt="ハッピーズ　ステンドグラス　イエロー"></span><p class="product-name">ハッピーズ　ステンドグラス　イエロー</p></a></li>
-<li style="z-index: 1;"><a href="#" class="button-todetail"><span class="image"><img src="../img/item/irodori/02.jpg" alt="イロドリ　イエローミックス"></span><p class="product-name">イロドリ　イエローミックス</p></a></li>
-<li style="z-index: 1;"><a href="#" class="button-todetail"><span class="image"><img src="../img/item/letter/1.jpg" alt="レター　数字「1」"></span><p class="product-name">レター　数字「1」</p></a></li>
-<li style="z-index: 1;"><a href="#" class="button-todetail"><span class="image"><img src="../img/item/letter/a.jpg" alt="レター　英字「A」"></span><p class="product-name">レター　英字「A」</p></a></li> -->
 </ul>
 
 </div>

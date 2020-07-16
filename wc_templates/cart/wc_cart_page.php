@@ -83,6 +83,8 @@ $wp_url = get_template_directory_uri();
 <?php else: ?>
 <p><?php _e('Sorry, no posts matched your criteria.', 'usces'); ?></p>
 <?php endif; ?>
+
+
 </div><!-- end of catbox -->
 </div><!-- end of content -->
 

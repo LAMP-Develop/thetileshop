@@ -128,24 +128,6 @@ $imageid = usces_get_itemSubImageNums();
 <div id="prodDetail" class="contProd">
 <div class="L4_tittype02">
 <dl id="prodSelectColor" class="selectAttr">
-<!-- <dt id="selectColorTitle">
-<img src="<?php echo $wp_url; ?>/assets/img/product/tit_select_color_JP.gif" alt="カラー・バリエーションを選択" title="カラー・バリエーションを選択" >
-<p class="current">カラー:&nbsp;23 ワイン</p>
-<p class="number">
-<img src="<?php echo $wp_url; ?>/assets/img/product/tit_select_number_JP.gif" alt="商品番号" title="商品番号">
-<span class="prodNo">商品番号：</span><span class="prodNumber">SB45-23</span>
-</p>
-</dt> -->
-<!-- <dd id="selectColorDetail">
-<ul id="listChipColor" class="listChip clearfix">
-<li color="00" class="">
-<div class="chipCover" color="00" title="ホワイト"></div>
-<a href="#colorSelect" title="ホワイト">
-<img alt="ホワイト" src="<?php echo $wp_url; ?>/products/img/item/aqa/16.jpg">
-</a>
-</li>
-</ul>
-</dd> -->
 </dl>
 </div>
 <div class="L-text">
